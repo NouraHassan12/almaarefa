@@ -1,0 +1,20 @@
+{
+    "en": {
+        "Applicants": "Applicants",
+        "dates":"Dates",
+        "name":"name",
+        "status":"status",
+        "email":"email"
+       
+    } ,
+
+
+    "ar": {
+        "Applicants": "المتقدمين" ,
+        "dates":"التواريخ",
+        "name":"الاسم",
+        "status":"الحالة",
+        "email":"البريد الالكتروني"
+      
+    }
+}
