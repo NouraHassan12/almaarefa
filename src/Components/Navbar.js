@@ -4,7 +4,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import '../Stylesheets/Navbar.css';
 import { IconContext } from 'react-icons';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { changeLang } from '../Redux/Language/LangAction';
 import PropTypes from 'prop-types';
@@ -25,13 +25,7 @@ class Navbar extends Component {
       }
 
 
-      checklang = () => {
-        if (this.props.language === 'en') {
-          this.setState({ text: text.en });
-        } else {
-          this.setState({ text: text.ar });
-        }
-      };
+  
 
 
       componentDidUpdate(previousProps, previousState) {
@@ -52,10 +46,8 @@ class Navbar extends Component {
         e.preventDefault();
         this.props.changeLang(e.target.id);
       };
-      componentDidMount() {
-        this.checklang();
-      }
-    
+
+      
 
      showSidebar =() => {
           this.setState({sidebar : !this.state.sidebar})
@@ -131,4 +123,4 @@ Navbar.propTypes = {
     language: state.lang.language
   });
   
-  export default connect(mapStateToProps, { changeLang })(withRouter(Navbar));
+  export default connect(mapStateToProps, { changeLang })(Navbar);

@@ -1,18 +1,5 @@
-// import React from 'react';
-
-// function Dates() {
-//   return (
-//     <div className="dates">
-//       Date
-//     </div>
-//   );
-// }
-
-// export default Dates;
-
 
 import React,{Component} from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { changeLang } from '../Redux/Language/LangAction';
 import PropTypes from 'prop-types';
@@ -30,13 +17,6 @@ class Dates extends Component {
         };
       }
 
-      checklang = () => {
-        if (this.props.language === 'en') {
-          this.setState({ text: text.en });
-        } else {
-          this.setState({ text: text.ar });
-        }
-      };
     
       componentDidUpdate(previousProps, previousState) {
         if (previousProps !== this.props) {
@@ -48,15 +28,8 @@ class Dates extends Component {
         }
       }
     
-      changeLanguage = e => {
-        e.preventDefault();
-        this.props.changeLang(e.target.id);
-      };
     
-      componentDidMount() {
-        window.scrollTo(0, 0);
-        this.checklang();
-      }
+    
       
         render() {
       return (
@@ -84,5 +57,5 @@ class Dates extends Component {
             changeLang:()=> dispatch(changeLang())
         };
       };
-      export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Dates));
+      export default connect(mapStateToProps, mapDispatchToProps)(Dates);
     

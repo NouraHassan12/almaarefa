@@ -11,7 +11,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import TablePagination from '@material-ui/core/TablePagination';
 import {changeLang} from '../Redux/Language/LangAction';
-import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 const text = require('../Lang.json');
 
@@ -34,22 +33,16 @@ class Applicants extends Component {
   };
 
    handleChangeRowsPerPage = (event) => {
-
     this.setState({rowsPerPage:+event.target.value})  
     this.setState({page:0}) 
   };
 
 
-
+  componentDidMount() {
+    this.props.fetchApplicants();
+  }
   
 
-  checklang = () => {
-    if (this.props.language === 'en') {
-      this.setState({ text: text.en });
-    } else {
-      this.setState({ text: text.ar });
-    }
-  };
 
   componentDidUpdate(previousProps, previousState) {
     if (previousProps !== this.props) {
@@ -61,16 +54,9 @@ class Applicants extends Component {
     }
   }
 
-  changeLanguage = e => {
-    e.preventDefault();
-    this.props.changeLang(e.target.id);
-  };
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-    this.props.fetchApplicants();
-    this.checklang();
-  }
+
+
   
     render() {
   return (
@@ -136,7 +122,7 @@ const mapStateToProps = (state) => {
   const mapDispatchToProps = (dispatch) => {
     return {
         fetchApplicants: () => dispatch(fetchApplicants()),
-        changeLang:()=> dispatch(changeLang())
+        changeLang: () => dispatch(changeLang())
     };
   };
-  export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Applicants));
+  export default connect(mapStateToProps, mapDispatchToProps)(Applicants);
