@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/almaarefa/static/css/main.fbb59f86.chunk.css",
-    "main.js": "/almaarefa/static/js/main.794f379c.chunk.js",
-    "main.js.map": "/almaarefa/static/js/main.794f379c.chunk.js.map",
+    "main.js": "/almaarefa/static/js/main.0cb98782.chunk.js",
+    "main.js.map": "/almaarefa/static/js/main.0cb98782.chunk.js.map",
     "runtime-main.js": "/almaarefa/static/js/runtime-main.b2761c38.js",
     "runtime-main.js.map": "/almaarefa/static/js/runtime-main.b2761c38.js.map",
-    "static/js/2.bf54c1de.chunk.js": "/almaarefa/static/js/2.bf54c1de.chunk.js",
-    "static/js/2.bf54c1de.chunk.js.map": "/almaarefa/static/js/2.bf54c1de.chunk.js.map",
+    "static/js/2.16a25424.chunk.js": "/almaarefa/static/js/2.16a25424.chunk.js",
+    "static/js/2.16a25424.chunk.js.map": "/almaarefa/static/js/2.16a25424.chunk.js.map",
     "static/js/3.995dd8ad.chunk.js": "/almaarefa/static/js/3.995dd8ad.chunk.js",
     "static/js/3.995dd8ad.chunk.js.map": "/almaarefa/static/js/3.995dd8ad.chunk.js.map",
     "index.html": "/almaarefa/index.html",
     "static/css/main.fbb59f86.chunk.css.map": "/almaarefa/static/css/main.fbb59f86.chunk.css.map",
-    "static/js/2.bf54c1de.chunk.js.LICENSE.txt": "/almaarefa/static/js/2.bf54c1de.chunk.js.LICENSE.txt"
+    "static/js/2.16a25424.chunk.js.LICENSE.txt": "/almaarefa/static/js/2.16a25424.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b2761c38.js",
-    "static/js/2.bf54c1de.chunk.js",
+    "static/js/2.16a25424.chunk.js",
     "static/css/main.fbb59f86.chunk.css",
-    "static/js/main.794f379c.chunk.js"
+    "static/js/main.0cb98782.chunk.js"
   ]
 }
